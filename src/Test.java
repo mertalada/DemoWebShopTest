@@ -52,6 +52,30 @@ public class Test {
         MyFunction.Wait(1);
 
 
+        WebElement logOut= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
+        logOut.click();
+
+        MyFunction.Wait(1);
+
+        WebElement logIn= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
+        logIn.click();
+
+        MyFunction.Wait(2);
+        email = driver.findElement(By.xpath("//input[@id='Email']"));
+        email.sendKeys("testingteam4@outlook.com");
+
+        MyFunction.Wait(2);
+        WebElement pswrd= driver.findElement(By.cssSelector("#Password"));
+        pswrd.sendKeys("Testing.123");
+
+        MyFunction.Wait(1);
+        WebElement logInLast= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div.center-2 > div > div.page-body > div.customer-blocks > div.returning-wrapper > div.form-fields > form > div.buttons > input"));
+        logInLast.click();
+
+
+
+
+
 
 
 
