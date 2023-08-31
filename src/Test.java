@@ -8,7 +8,6 @@ import static Utility.BaseDriver.driver;
 public class Test {
 
     @org.junit.Test
-
     public void DemoWebShop(){
 
         driver.get("https://demowebshop.tricentis.com/");
