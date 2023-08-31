@@ -54,6 +54,8 @@ public class Test {
         WebElement logOut= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
         logOut.click();
 
+        NegativeTest.LognInNegativeTest();
+
         MyFunction.Wait(1);
 
         WebElement logIn= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
