@@ -42,7 +42,7 @@ public class NegativeTest {
         login.click();
 
         WebElement email = driver.findElement(By.name("Email"));
-        email.sendKeys("testingteam4@outlook.com");
+        email.sendKeys("testingdeneme2@outlook.com");
 
         WebElement password = driver.findElement(By.name("Password"));
         password.sendKeys("");
@@ -78,7 +78,7 @@ public class NegativeTest {
         login.click();
 
         WebElement email=driver.findElement(By.name("Email"));
-        email.sendKeys("testingteam4@outlook.com");
+        email.sendKeys("testingdeneme2@outlook.com");
 
         WebElement password= driver.findElement(By.name("Password"));
         password.sendKeys("team456");

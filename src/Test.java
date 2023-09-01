@@ -32,7 +32,7 @@ public class Test {
 
         MyFunction.Wait(2);
         WebElement email= driver.findElement(By.xpath("//input[@id='Email']"));
-        email.sendKeys("testingteam4@outlook.com");
+        email.sendKeys("testingdeneme2@outlook.com");
 
         MyFunction.Wait(2);
         WebElement password= driver.findElement(By.xpath("//input[@id='Password']"));
@@ -66,7 +66,7 @@ public class Test {
 
         MyFunction.Wait(2);
         WebElement email1 = driver.findElement(By.xpath("//input[@id='Email']"));
-        email1.sendKeys("testingteam4@outlook.com");
+        email1.sendKeys("testingdeneme2@outlook.com");
 
         MyFunction.Wait(2);
         WebElement pswrd= driver.findElement(By.cssSelector("#Password"));
@@ -295,7 +295,18 @@ public class Test {
         WebElement confirmbutton3=driver.findElement(By.cssSelector("[onclick='ConfirmOrder.save()']"));
         confirmbutton3.click();
 
+        WebElement logOut2= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
+        logOut2.click();
 
+        SedaTest.Sepet_Kontrolü();
+
+        WebElement logOut3= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
+        logOut3.click();
+
+        SedaTest.Anket_Yanıtlama();
+
+        WebElement logOut4= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
+        logOut4.click();
 
     }
 }
