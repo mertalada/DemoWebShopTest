@@ -13,6 +13,8 @@ public class Test {
 
         driver.get("https://demowebshop.tricentis.com/");
 
+        NegativeTest.SingUpNegativeTest();
+
         WebElement register=driver.findElement(By.xpath("//a[@class='ico-register']"));
         register.click();
 
