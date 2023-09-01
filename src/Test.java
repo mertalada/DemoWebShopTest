@@ -1,6 +1,9 @@
 import Utility.MyFunction;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import static Utility.BaseDriver.driver;
@@ -32,7 +35,7 @@ public class Test {
 
         MyFunction.Wait(2);
         WebElement email= driver.findElement(By.xpath("//input[@id='Email']"));
-        email.sendKeys("testingteam4@outlook.com");
+        email.sendKeys("testingdeneme2@outlook.com");
 
         MyFunction.Wait(2);
         WebElement password= driver.findElement(By.xpath("//input[@id='Password']"));
@@ -66,7 +69,7 @@ public class Test {
 
         MyFunction.Wait(2);
         WebElement email1 = driver.findElement(By.xpath("//input[@id='Email']"));
-        email1.sendKeys("testingteam4@outlook.com");
+        email1.sendKeys("testingdeneme2@outlook.com");
 
         MyFunction.Wait(2);
         WebElement pswrd= driver.findElement(By.cssSelector("#Password"));
@@ -120,37 +123,36 @@ public class Test {
 
         MyFunction.Wait(1);
 
-        WebElement continuebutton=driver.findElement(By.xpath("//input[@title='Continue']"));
-        continuebutton.click();
-
-        MyFunction.Wait(1);
-
-        WebElement adressselect=driver.findElement(By.name("shipping_address_id"));
+        WebElement adressselect=driver.findElement(By.name("billing_address_id"));
         adressselect.sendKeys("New Address");
 
+        WebElement country0= driver.findElement(By.name("BillingNewAddress.CountryId"));
+        country0.click();
 
-        WebElement country2= driver.findElement(By.id("ShippingNewAddress_CountryId"));
-        country2.click();
+        Select countryselect4 = new Select(country0);
+        countryselect4.selectByValue("77");
 
-        Select countryselect2 = new Select(country2);
-        countryselect2.selectByValue("77");
+        WebElement city0= driver.findElement(By.cssSelector("#BillingNewAddress_City"));
+        city0.sendKeys("Adana");
 
-        WebElement city= driver.findElement(By.id("ShippingNewAddress_City"));
-        city.sendKeys("Adana");
+        WebElement adress0= driver.findElement(By.id("BillingNewAddress_Address1"));
+        adress0.sendKeys("hürriyet mahallesi Adana/Turkey");
 
-        WebElement adress1= driver.findElement(By.id("ShippingNewAddress_Address1"));
-        adress1.sendKeys("hürriyet mahallesi Adana/Turkey");
+        WebElement postalcode0= driver.findElement(By.id("BillingNewAddress_ZipPostalCode"));
+        postalcode0.sendKeys("01000");
 
-        WebElement postalcode1= driver.findElement(By.id("ShippingNewAddress_ZipPostalCode"));
-        postalcode1.sendKeys("01000");
-
-        WebElement phonenumber= driver.findElement(By.id("ShippingNewAddress_PhoneNumber"));
-        phonenumber.sendKeys("05446675434");
+        WebElement phonenumber0= driver.findElement(By.id("BillingNewAddress_PhoneNumber"));
+        phonenumber0.sendKeys("05446675434");
 
         MyFunction.Wait(1);
 
-        WebElement continuebutton2=driver.findElement(By.cssSelector("[onclick='Shipping.save()']"));
-        continuebutton2.click();
+        WebElement continuebutton0=driver.findElement(By.xpath("//input[@title='Continue']"));
+        continuebutton0.click();
+
+        MyFunction.Wait(1);
+
+        WebElement continuebutton01=driver.findElement(By.cssSelector("[onclick='Shipping.save()']"));
+        continuebutton01.click();
 
         MyFunction.Wait(1);
 
@@ -250,8 +252,8 @@ public class Test {
         WebElement country4= driver.findElement(By.name("BillingNewAddress.CountryId"));
         country4.click();
 
-        Select countryselect4 = new Select(country4);
-        countryselect4.selectByValue("77");
+        Select countryselect0 = new Select(country4);
+        countryselect0.selectByValue("77");
 
         WebElement city3= driver.findElement(By.cssSelector("#BillingNewAddress_City"));
         city3.sendKeys("Adana");
@@ -295,7 +297,12 @@ public class Test {
         WebElement confirmbutton3=driver.findElement(By.cssSelector("[onclick='ConfirmOrder.save()']"));
         confirmbutton3.click();
 
+        WebElement logOut2= driver.findElement(By.cssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.header > div.header-links-wrapper > div.header-links > ul > li:nth-child(2) > a"));
+        logOut2.click();
+
+
 
 
     }
+
 }
